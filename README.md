@@ -4,7 +4,7 @@
 
 ### [5월 13~19일, 1주차] : java응용, git응용
 
-[2026-05-13](https://hansol2124.tistory.com/156)=[java]
+[2026-05-13](개발 블로그 https://hansol2124.tistory.com/156)-[java]
 
 [2026-05-14](https://github.com/100-hours-a-week/til-template/blob/main/Apr/2024-04-24.md)-[git응용]
 
