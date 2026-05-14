@@ -24,13 +24,21 @@ TIL Template (정리중)
 
 오늘의 생긴 질문과 답변 
 
-Q upstream과 origin의 차이가 뭐지?
+Q)upstream과 origin의 차이가 뭐지?
+origin : 내 원격 저장소(fork한 내 GitHub)
+upstream : 원본 저장소(팀/Organization 저장소)
 
-Qclone과 fork의 차이가 뭐지?
 
-Q organization이 뭐지?
+Q)clone과 fork의 차이가 뭐지?
+clone : 저장소를 내 컴퓨터로 복사
+fork : 남의 GitHub 저장소를 내 GitHub 계정으로 복사
 
-Quntracked와 tracked는 어떤 차이가 있지?
+Q)organization이 뭐지?
+여러 사람이 함께 사용하는 GitHub 팀/그룹 계정
+
+Q)untracked와 tracked는 어떤 차이가 있지?
+tracked : Git이 변경사항을 추적 중인 파일
+untracked : Git이 아직 관리하지 않는 새 파일
 
 
 
