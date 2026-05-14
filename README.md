@@ -6,7 +6,7 @@
 
 [2026-05-13](https://hansol2124.tistory.com/156)-[java]
 
-[2026-05-14](https://github.com/100-hours-a-week/til-template/blob/main/Apr/2024-04-24.md)-[git응용]
+[2026-05-14](https://github.com/100-hours-a-week/til-template/blob/main/Apr/2024-04-24.md](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-05/2026-05-14.md)-[git응용]
 
 24.04.04 세부 주제 3 작성 (상세 내역 링크)
 
