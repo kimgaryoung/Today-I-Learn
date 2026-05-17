@@ -1,8 +1,14 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.awt.color.ICC_ColorSpace;
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Scanner;
 import java.time.LocalDate;
+
+import java.time.LocalDateTime;
+import java.time.Duration;
+
 
 
  class Diet{
@@ -17,7 +23,7 @@ import java.time.LocalDate;
     Diet(boolean run) {
 
 
-        if (run) {
+        if (run) { // 상속 받는 자식 클래스들이  상속 받고 사용할떄 다시 여기부터 시작하지 않기 위해서
             System.out.println("-----------[다이어트 앱]---------------");
 
             System.out.print("이름을 입력해주세요:");
@@ -27,18 +33,21 @@ import java.time.LocalDate;
 
             System.out.println("오늘은 " + curDate + " 입니다.");
 
-            System.out.print("다이어트를 시작하시겠습니까?(y/n):");
-            String ans = scanner.nextLine();
 
-            if (ans.equals("y")) {
-                start(name);
-            } else if (ans.equals("n")) {
-                stop();
-            } else {
-                start(name);
-                // 임시로 일단 뒤에 짜고 다시
 
-            }
+                System.out.print("다이어트를 시작하시겠습니까?(y/n):");
+                String ans = scanner.nextLine();
+
+                if (ans.equals("y")) {
+                    start(name);
+
+                } else if (ans.equals("n")) {
+                    stop();
+                } else {
+                    stop();
+
+                }
+
 
         }
     }
@@ -56,20 +65,24 @@ import java.time.LocalDate;
         while(true) {
             scanner.nextLine(); // 비워주지 않으니까 계속 입력 스킵하고 else로 넘어감.
 
-
+            System.out.println("그만두길 원하면 식단/운동 외 아무 키나 눌러주세요.");
             //2.운동할지 식단할지 선택(운동 갔다가 다시 여기로 돌아오기) -둘다 자식 클래스
             System.out.print(name + "님! 식단으로 갈까요? 운동으로 갈까요?(식단/운동):");
+
 
             String ans = scanner.nextLine().trim();
 
             if (ans.equals("식단")) {
+                Food f=new Food(name,true);
 
 
             } else if (ans.equals("운동")) {
                 Exercise exer = new Exercise(name, true);
 
             } else {
-                    stop();
+
+                System.out.println("프로그램을 종료하겠습니다~ ");
+                    stop();//프로그램이 종료되는 경우
 
             }
         }
@@ -87,7 +100,7 @@ import java.time.LocalDate;
 }
 
 
-
+//다이어트 <- 몸무게
 class Weight extends Diet{
      float curKG;//현재 몸무게
      float goalKG;//목표몸무게
@@ -538,11 +551,192 @@ class Strength extends Exercise{// 무산소 운동
 
 
 
-/*
+
 class Food extends Diet{
 
+     int intakeKcal; //섭취 칼로리
+
+    int goalKcal; // 목표 칼로리
+    int emptyTime; // 공복시간
+   // boolean success;// 성공 유무
+
+    LocalDateTime startDate; //시작 시간, 종료 시간- 공복 3일 일수도 있으니까 날짜.시간 다 기록
+    LocalDateTime endDate;
+
+
+
+     Food(String name, boolean run){
+
+         super(false);
+         this.name=name;
+
+         System.out.println("------------식단 기록을 시작합니다.------------------");
+
+
+             while (true) {
+                 System.out.println("공복을 시작 하시겠습니까?(y/n) : ");
+                 String s = scanner.nextLine();
+
+                 if (s.equals("y")) {
+                     start(name);
+
+
+                     while(true) {
+                         System.out.println("공복을 종료 하시겠습니까?(y/n) : ");
+                         String ss = scanner.nextLine();
+
+                         if (ss.equals("y")) {
+                             stop();
+
+                             emptyTime=emptyTimeFuc(startDate,endDate);
+
+                             System.out.println("공복 시간은 "+emptyTime+"분입니다.");
+                             System.out.println("식단 점수는 "+sucCal(emptyTime,goalKcal,intakeKcal)+"점 입니다.");
+
+                             break;
+
+                         } else if (ss.equals("n")) { // 시간 지나서 다시 물어봄
+
+                             try {
+                                 Thread.sleep(3000);
+
+                             }catch(InterruptedException e) {
+
+                                 break;
+                             }
+
+                         } else {
+                             System.out.println("잘못 입력 했습니다.");
+
+                         }
+                     }
+                     break;
+
+                 } else if (s.equals("n")) {
+                     System.out.println("당신의 하루 섭취 칼로리에 목표를 적어주세요. (ex 2000): ");
+                     goalKcal = scanner.nextInt();
+
+                     System.out.print("오늘 드신 칼로리를 적어주세요(ex 1800)");
+                     intakeKcal = scanner.nextInt();
+                     scanner.nextLine();
+
+
+                     System.out.println("식단 점수는 "+sucCal(goalKcal,intakeKcal)+"잠 입니다.");
+                     break;
+
+                 } else {
+                     System.out.println("잘못 입력 했습니다.");
+
+                 }
+             }
+
+
+     }
+
+
+
+
+     @Override
+    void start(String name)// 식단 시작 시간 저장.
+     {
+         startDate=LocalDateTime.now();
+
+         System.out.println(name+"님 반갑습니다.-----  " +startDate+ "----- 공복 측정을 시작하겠습니다.");
+
+
+         System.out.print("당신의 하루 섭취 칼로리에 목표를 적어주세요. (ex 2000): ");
+         goalKcal=scanner.nextInt();
+
+         System.out.print("오늘 드신 칼로리를 적어주세요(ex 1800) : ");
+         intakeKcal=scanner.nextInt();
+
+         scanner.nextLine();
+
+     }
+
+     @Override
+    void stop()// 식단 종료 시간 저장
+     {
+         endDate=LocalDateTime.now();
+
+         System.out.println(name+"님 수고하셨습니다.----------  " +endDate+ "-----------공복 측정이 끝났습니다.");
+
+
+     }
+
+
+
+
+
+
+
+
+     // 공복 시간 계산
+    int emptyTimeFuc(LocalDateTime startDate, LocalDateTime endDate)
+    {
+        long tmp= Duration.between(startDate, endDate).toMinutes(); // 분 계산
+        return (int)tmp;
+
+    }
+
+    //칼로리로만 점수 계산 -오버오딩
+    int sucCal(int goalKcal, int intakeKcal)
+    {
+        int val=goalKcal-intakeKcal;
+
+       if (val>=0)
+        {
+            return 100;
+
+        }
+       else if(val<=-100)
+       {
+           return 60;
+       }
+       else
+        {
+            return 20;
+        }
+
+
+
+    }
+
+
+    //공복 시간 포함한 점수 계산 -오버로딩
+    int sucCal(int emptyTime, int goalKcal, int intakeKcal)
+    {
+
+
+        int score1=sucCal(goalKcal,intakeKcal)/2;
+        int score2=0;
+        if(emptyTime>=16)
+        {
+            score2=50;
+        }
+        else if(emptyTime>=8 && emptyTime<16)
+        {
+            score2=15;
+        }
+        else
+        {
+            score2=5;
+        }
+
+
+        return score1+score2;
+
+
+
+    }
+
+
+
+
+
+
 }
-*/
+
 
 
 
