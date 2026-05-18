@@ -7,10 +7,10 @@ https://github.com/kimgaryoung/Today-I-Learn/edit/main/2026-05/
 
 
 
-##<핵심 규칙> 
+# 핵심 규칙
 
-### 1. URL은 자원을 표현하다.  
-### 2, 자원의 행위는 메소드로 표현하다.  
+## 1. URL은 자원(Resource)을 표현한다.
+## 2. 자원에 대한 행위는 HTTP 메서드로 표현한다.
 
 
 
