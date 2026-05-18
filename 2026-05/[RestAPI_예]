@@ -3,6 +3,19 @@
 배운 내용을 정리하는 용도 입니다. 
 
 
+https://github.com/kimgaryoung/Today-I-Learn/edit/main/2026-05/
+
+
+
+##<핵심 규칙>
+
+###1. URL은 자원을 표현하다. 
+###2, 자원의 행위는 메소드로 표현하다. 
+
+
+
+
+
 1) 회원을 생성해주세요 
 
 Post /users
