@@ -12,7 +12,7 @@
 
 [2026-05-17](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-05/weekly01/src/Main.java)-[1주차 과제 :CLI작성]
 
-### [5월 18~24일, 4주차] :been,Servlet,MVC,https
+### [5월 18~24일, 2주차] :been,Servlet,MVC,https
 
 [2026-05-18](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-05/2026-05-18.md)-[웹 기초]
 
