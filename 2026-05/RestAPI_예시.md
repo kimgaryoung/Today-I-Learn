@@ -3,7 +3,6 @@
 배운 내용을 정리하는 용도 입니다. 
 
 
-https://github.com/kimgaryoung/Today-I-Learn/edit/main/2026-05/
 
 
 
