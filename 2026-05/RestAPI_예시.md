@@ -17,15 +17,17 @@
 
 1) 회원을 생성해주세요 
 
+```json
 Post /users
+```
 
+2) 코난이라는 이름을 가진 강아지 정보를 생성한다.<br>
 
-2) 코난이라는 이름을 가진 강아지 정보를 생성한다. 
+코난 : 메세지 <br>
+강아지 :리소스 <br>
+생성한다 : 메소드 <br>
 
-코난 : 메세지 
-강아지 :리소스 
-생성한다 : 메소드 
-
+```json
 Post http://mypet/pets
 {
     "pets":{
@@ -33,34 +35,43 @@ Post http://mypet/pets
       }
 
 }
+```
 
 
 3) 회원 가입할 떄 
 
+```json
 Post /user
+```
 
+4) 로그인 할떄
 
-4) 로그인 할떄 
+```json
 Post /auth
-
-로그인 결과 =인증 정보 얻음 
-인정 정보 = /auth
-생성 = Post
+```
 
 
+로그인 결과 =인증 정보 얻음 <br>
+인정 정보 = /auth<br>
+생성 = Post<br>
 
-5) 회원 삭제 : 복구 약관 30일 이내는 복구 해명 
 
+
+5) 회원 삭제 : 복구 약관 30일 이내는 복구 해명 <br>
+
+```json
 Delete /usesrs/{uer_id} (o)
 
 Patch/usesrs/{user_id} (x)
-
+```
 
 
 6) charile회원의 이름을 변경하세요
+
+```json
 PATCH /user/charile{"name" :"Charlie"}
 
-
+```
 프론트엔드 개발자 입장에서 서버를 기준으로 생각할 필요가 없다. patch를 사용하는 경우 추가적인 설명이 필요할 수 있어 오히려 번거로운 것 같다. 
 
 
