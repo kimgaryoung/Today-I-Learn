@@ -57,6 +57,11 @@ Delete /usesrs/{uer_id} (o)
 Patch/usesrs/{user_id} (x)
 
 
+
+6) charile회원의 이름을 변경하세요
+PATCH /user/charile{"name" :"Charlie"}
+
+
 프론트엔드 개발자 입장에서 서버를 기준으로 생각할 필요가 없다. patch를 사용하는 경우 추가적인 설명이 필요할 수 있어 오히려 번거로운 것 같다. 
 
 
