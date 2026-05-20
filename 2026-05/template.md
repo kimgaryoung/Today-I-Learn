@@ -9,7 +9,7 @@
 
 <br>
 <br>
-<detail>
+<details>
 <summary>제목 </summary>
 
 **잘못된 코드**
@@ -25,7 +25,7 @@
 
 ```
 
-</detail>
+</details>
 
 ---
 # 오늘의 생긴 질문과 답변
