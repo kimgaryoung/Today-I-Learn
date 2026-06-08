@@ -28,3 +28,14 @@
 [2026-05-26]()-[index,b-tree, b+tree,hasg]  
 [2026-05-27](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-05/2026-05-27.md)-[인증,인가,JWT]<br> 
 [2026-05-28](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-05/2026-05-28.md)-[Nosql,DB확장, Local Cache, Global Cache] 
+
+
+---
+
+### [6월1~7일, 4주차 ]: 영속성 컨텍스트 
+
+
+---
+
+### [6월 8~14일, 5주차] : OS, 페이징, 세그멘테이션 
+[2026-06-08]()-[os,커널,메모리 분할,IPC,PCB]<br>
