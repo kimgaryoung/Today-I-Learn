@@ -40,3 +40,8 @@
 ### [6월 8~14일, 5주차] : OS, 페이징, 세그멘테이션 
 [2026-06-07](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-08.md)-[os,커널,메모리 분할,IPC,PCB]<br>
 [2026-06-08](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-09.md)-[스케줄링 알고리즘, 동시성,병렬성]<br>
+
+---
+### [6월 15~21일, 6주차] : 네트워크, 네트워크 장비 
+[2026-06-15](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-15.md)-[네트워크,게이트웨이,라우터]<br>
+
