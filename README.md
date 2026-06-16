@@ -42,6 +42,7 @@
 [2026-06-08](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-09.md)-[스케줄링 알고리즘, 동시성,병렬성]<br>
 
 ---
-### [6월 15~21일, 6주차] : 네트워크, 네트워크 장비 
+### [6월 15~21일, 6주차] : 네트워크, 네트워크 장비 , 네트워크 트래픽 처리 , wireshark
 [2026-06-15](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-15.md)-[네트워크,게이트웨이,라우터]<br>
+[2026-06-16](https://github.com/kimgaryoung/Today-I-Learn/blob/main/2026-06/2026-06-16.md)-[네트워크 트래픽 처리 : 인라인,Out of Path]
 
